@@ -1,10 +1,13 @@
+
 .bg-logo-text {
     color: white;
 }
 
 .background {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "a b"
+    "c c";
     color: white;
     padding: 5vw 10vw 5vw 10vw;
 }
@@ -30,7 +33,12 @@ font-size: 2.5vw;
 }
 
 .background_columnLeft {
+    grid-area: a;
     padding-right: 0px;
+}
+
+.background_columnRight {
+    grid-area: b;
 }
 
 .background_columnLeft, .background_columnRight {
@@ -45,4 +53,16 @@ font-size: 2.5vw;
     gap: 0.8em;
     grid-template-columns: repeat(2, fit-content(100%));
     grid-template-rows: repeat(2, fit-content(100%));
+}
+
+.SearchbarContainer {
+    text-align: center;
+    grid-area: c;
+    background: white;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    padding: 1vh 0vw 1vh 0vw;
+    margin: 5vh 15vw;
+
 }

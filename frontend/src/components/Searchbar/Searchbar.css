@@ -1,0 +1,22 @@
+
+.SearchbarContainer > * {
+    color: black;
+}
+.SearchQuery {
+padding-left: 1vw;
+}
+.SearchQ {
+    border: 0px;
+    width: 100%;
+}
+
+.SearchQ:focus {
+    outline: none;
+}
+
+.SearchButtonContainer {
+    margin: 0;
+padding: 0;
+}
+
+

@@ -1,5 +1,6 @@
 import React from 'react';
 import './Guestcontent.css';
+import Searchbar from "../Searchbar"
 
 function Guestcontent() {
 
@@ -28,8 +29,8 @@ function Guestcontent() {
                         <img src="https://s3-media0.fl.yelpcdn.com/bphoto/EzNDh4YuvNrJfmPYEpPZzQ/o.jpg" height="200px" width="200px" />
                     </div>
                 </div>
+                <Searchbar />
             </div>
-            <Searchbar />
             <div className="features" />
         </div>
     );
