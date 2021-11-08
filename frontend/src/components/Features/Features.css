@@ -1,3 +1,51 @@
 .FeaturesContainer {
     background: white;
+    color: black;
+    padding: 1vw 10vw 0vw 10vw;
 }
+
+.FeaturesContent {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5%;
+}
+
+.feature1Container, .feature2Container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.feature1Container > img, .feature2Container > img{
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.feature1Heading, .feature2Heading {
+   padding: 2vh 0vw 3vw 0vh;
+}
+
+.feature1Heading > p, .feature2Heading > p{
+font-size: 1.5vw;
+text-align: center;
+}
+
+.feature1Text, .feature2Text {
+    font-size: 1.25vw;
+}
+.background_columnLeft {
+    grid-area: a;
+    padding-right: 0px;
+}
+
+.background_columnRight {
+    grid-area: b;
+}
+
+.background_columnLeft, .background_columnRight {
+    margin: 0 auto;
+    text-align: center;
+}
+
