@@ -1,21 +1,24 @@
 .NavigationBar {
     display: grid;
-    padding: 0px 10px 10px 80%;
-    grid-template-columns: 1fr 1fr;
-    text-align: right;
+    padding: 0px 10px 10px 75%;
+    grid-template-columns: repeat(2, fit-content(100%));
 }
 
 .HomeLinkContainer {
     padding-top: 10px;
-    padding-right: 15px;
+    padding-right: 10px;
 }
 
 .SignUpLinkContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    text-align: left;
 }
+
 .SignUpLinkLink {
     padding-top: 10px;
+    text-align: left;
 }
 
 .SignUpLink, .HomeLink {

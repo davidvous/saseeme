@@ -1,3 +1,40 @@
 .bg-logo-text {
     color: white;
 }
+
+.background {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: white;
+    padding: 5vw 10vw 5vw 10vw;
+}
+
+.logo > img {
+    height: 150px;
+    width: 150px;
+}
+
+.logoHR {
+    background: #Ea646a;
+    height: 4px;
+    width: 50px;
+    margin: 20px auto;
+}
+
+.background_columnLeft {
+    padding-right: 0px;
+}
+
+.background_columnLeft, .background_columnRight {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.imageCarousel {
+    display: grid;
+    min-height: 0;
+    min-width: 0;
+    gap: 0.8em;
+    grid-template-columns: repeat(2, fit-content(100%));
+    grid-template-rows: repeat(2, fit-content(100%));
+}
