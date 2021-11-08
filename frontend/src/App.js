@@ -4,6 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
 import Navigation from "./components/Navigation";
+import Maincontent from "./components/Maincontent";
 
 function App() {
     const dispatch = useDispatch();
@@ -12,8 +13,6 @@ function App() {
         dispatch(sessionActions.restoreUser()).then(() => setIsLoaded(true));
     }, [dispatch]);
 
-
-    // this allows NavBar to load while limiting the rest of the page
     return (
         <>
             <Navigation isLoaded={isLoaded} />
@@ -24,6 +23,7 @@ function App() {
                     </Route>
                 </Switch>
             )}
+            <Maincontent isLoaded={isLoaded} />
         </>
     );
 }
