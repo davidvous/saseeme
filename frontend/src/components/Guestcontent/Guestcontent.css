@@ -1,0 +1,66 @@
+
+.bg-logo-text {
+    color: white;
+}
+
+.background {
+    display: grid;
+    grid-template-areas:
+    "a b"
+    "c c";
+    color: white;
+    padding: 5vw 10vw 5vw 10vw;
+}
+
+.logo > img {
+    height: 150px;
+    width: 150px;
+}
+
+.logoText {
+font-size: 2.5vw;
+}
+
+.logoHR {
+    background: #Ea646a;
+    height: 4px;
+    width: 50px;
+    margin: 20px auto;
+}
+
+.headingText {
+    font-size: 2vw;
+}
+
+.background_columnLeft {
+    grid-area: a;
+    padding-right: 0px;
+}
+
+.background_columnRight {
+    grid-area: b;
+}
+
+.background_columnLeft, .background_columnRight {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.imageCarousel {
+    display: grid;
+    min-height: 0;
+    min-width: 0;
+    gap: 0.8em;
+    grid-template-columns: repeat(2, fit-content(100%));
+    grid-template-rows: repeat(2, fit-content(100%));
+}
+
+.SearchbarContainer {
+    text-align: center;
+    grid-area: c;
+    background: white;
+    width: 50vw;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: 5vh 15vw;
+}

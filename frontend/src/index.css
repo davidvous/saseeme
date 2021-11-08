@@ -1,1 +1,12 @@
-/* TODO Add site wide styles */
+ * {
+    margin: 0;
+    padding: 0;
+}
+
+.appContainer {
+    background: url("https://cdn.discordapp.com/attachments/907133739128217621/907286629100695572/saseeme_bgfinal.png");
+    background-position: 50%;
+}
+
+
+
