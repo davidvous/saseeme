@@ -9,6 +9,7 @@ function Guestcontent() {
                 <div className="background_columnLeft" />
                 <div>
                     <img src="https://cdn.discordapp.com/attachments/907133739128217621/907305017021714472/logo_invert.png" />
+                    <img src="https://cdn.discordapp.com/attachments/907133739128217621/907307253009383465/logo.png" />
                 </div>
                 <div className="bg_logo_text">
                     <p>Saseeme</p>

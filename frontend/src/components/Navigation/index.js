@@ -15,21 +15,23 @@ function Navigation({ isLoaded }) {
         );
     } else {
         sessionLinks = (
-            <>
+            <div className="SignUpLinkContainer">
                 <LoginFormModal />
-                <NavLink to="/signup">Sign Up</NavLink>
-            </>
+                <div className="SignUpLinkLink">
+                    <NavLink className="SignUpLink" to="/signup">SIGN UP</NavLink>
+                </div>
+            </div>
         );
     }
 
     return (
         <div className="NavigationBar">
-            <div className="HomeLink">
-                <NavLink exact to="/">Home</NavLink>
+            <div className="HomeLinkContainer">
+                <NavLink className="HomeLink" exact to="/">
+                    <img src="https://cdn.discordapp.com/attachments/907133739128217621/907305017021714472/logo_invert.png" />
+                </NavLink>
             </div>
-            <div>
-                {isLoaded && sessionLinks}
-            </div>
+            {isLoaded && sessionLinks}
         </div>
     );
 }

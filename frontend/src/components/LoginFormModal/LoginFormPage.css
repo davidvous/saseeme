@@ -1,3 +1,25 @@
-.loginUser {
-    color: blue;
+
+
+.loginButtonContainer {
+    padding-top: 15px;
+    padding-right: 10px;
+}
+
+.loginButton {
+    color: red;
+    background-color: transparent;
+  border: 2px white solid;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.loginButton:hover {
+     background-color: white;
+  color: black;
 }
