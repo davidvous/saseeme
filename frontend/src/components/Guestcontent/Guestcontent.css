@@ -9,7 +9,7 @@
     "a b"
     "c c";
     color: white;
-    padding: 5vw 10vw 5vw 10vw;
+    padding: 5vw 10vw 0vw 10vw;
 }
 
 .logo > img {
@@ -62,5 +62,5 @@ font-size: 2.5vw;
     width: 50vw;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    margin: 5vh 15vw;
+    margin: 5vh 15vw 3vh 15vw;
 }
