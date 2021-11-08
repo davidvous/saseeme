@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './Maincontent.css';
+import Guestcontent from '../Guestcontent'
 
 function Maincontent({ isLoaded }) {
 
@@ -13,13 +14,13 @@ function Maincontent({ isLoaded }) {
         );
     } else {
         content = (
-            <p>User is not logged in!</p>
+            <Guestcontent />
         );
     }
     return (
-        <>
+        <div className="GcContainer">
             {isLoaded && content}
-        </>
+        </div>
     );
 }
 

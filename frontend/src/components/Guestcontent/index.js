@@ -6,6 +6,19 @@ function Guestcontent() {
     return (
         <div className="GuestcontentMain">
             <div className="background">
+                <p>Testing</p>
+                <p>sdfdsfds
+                    dsfds
+                    fromfds
+                    fromfdsfs
+                    fromfdssdf
+                    dsfdsfds
+                    fromfdsfssdf
+                    sdfdsfdsfsd
+                    ffromfdsfssdff
+                    sdfdsfdsfsdds
+                    ffromfdsfssdfff
+                    s</p>
                 <div className="background_columnLeft" />
                 <div className="background_columnRight" />
             </div>
@@ -15,4 +28,4 @@ function Guestcontent() {
     );
 }
 
-export default Maincontent;
+export default Guestcontent;
