@@ -14,11 +14,19 @@
     width: 150px;
 }
 
+.logoText {
+font-size: 2.5vw;
+}
+
 .logoHR {
     background: #Ea646a;
     height: 4px;
     width: 50px;
     margin: 20px auto;
+}
+
+.headingText {
+    font-size: 2vw;
 }
 
 .background_columnLeft {

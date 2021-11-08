@@ -12,12 +12,12 @@ function Guestcontent() {
                     </div>
                     <div className="logoTextContainer">
                         <h1 className="logoText">SASEEME</h1>
-                        <p>Yum</p>
+                        <p>yum.</p>
                     </div>
                     <div className="logoHR">
                     </div>
-                    <div className="logoExtraText">
-                        <p>Find your favorite dishes and share it with the world!</p>
+                    <div>
+                        <p className="headingText">Find your favorite dishes and share it with the world!</p>
                     </div>
                 </div>
                 <div className="background_columnRight">
@@ -29,7 +29,7 @@ function Guestcontent() {
                     </div>
                 </div>
             </div>
-            <div className="searchBar" />
+            <Searchbar />
             <div className="features" />
         </div>
     );
