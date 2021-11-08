@@ -27,9 +27,7 @@ function Navigation({ isLoaded }) {
     return (
         <div className="NavigationBar">
             <div className="HomeLinkContainer">
-                <NavLink className="HomeLink" exact to="/">
-                    <img src="https://cdn.discordapp.com/attachments/907133739128217621/907305017021714472/logo_invert.png" />
-                </NavLink>
+                <NavLink className="HomeLink" exact to="/">HOME</NavLink>
             </div>
             {isLoaded && sessionLinks}
         </div>

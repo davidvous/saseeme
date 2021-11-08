@@ -1,15 +1,13 @@
 .NavigationBar {
     display: grid;
-    padding: 10px 10px 10px 80%;
+    padding: 0px 10px 10px 80%;
     grid-template-columns: 1fr 1fr;
     text-align: right;
 }
 
-.HomeLink  > img {
-    width: 80px;
-    height: 80px;
-    Transition: 0.3s;
-    Cursor: pointer;
+.HomeLinkContainer {
+    padding-top: 10px;
+    padding-right: 15px;
 }
 
 .SignUpLinkContainer {
@@ -17,10 +15,10 @@
     grid-template-columns: 1fr 1fr;
 }
 .SignUpLinkLink {
-padding-top: 15px;
+    padding-top: 10px;
 }
 
-.SignUpLink {
+.SignUpLink, .HomeLink {
     color: white;
     text-decoration: none;
     border: 2px white solid;
@@ -33,7 +31,7 @@ padding-top: 15px;
     Cursor: pointer;
 }
 
-.SignUpLink:hover {
+.SignUpLink:hover, .HomeLink:hover{
     background-color: white;
     color: black;
 }
