@@ -62,7 +62,5 @@ font-size: 2.5vw;
     width: 50vw;
     display: grid;
     grid-template-columns: 4fr 1fr;
-    padding: 1vh 0vw 1vh 0vw;
     margin: 5vh 15vw;
-
 }
