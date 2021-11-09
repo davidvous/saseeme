@@ -1,4 +1,6 @@
-
+.GuestcontentMain {
+    height: 100vh;
+}
 .bg-logo-text {
     color: white;
 }
@@ -9,7 +11,7 @@
     "a b"
     "c c";
     color: white;
-    padding: 5vw 10vw 0vw 10vw;
+    padding: 2vh 10vw 0vw 10vw;
 }
 
 .logo > img {

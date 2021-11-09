@@ -2,6 +2,7 @@
     background: white;
     color: black;
     padding: 1vw 10vw 0vw 10vw;
+    overflow: scroll;
 }
 
 .FeaturesContent {
@@ -35,17 +36,5 @@ text-align: center;
 .feature1Text, .feature2Text {
     font-size: 1.25vw;
 }
-.background_columnLeft {
-    grid-area: a;
-    padding-right: 0px;
-}
 
-.background_columnRight {
-    grid-area: b;
-}
-
-.background_columnLeft, .background_columnRight {
-    margin: 0 auto;
-    text-align: center;
-}
 
