@@ -1,5 +1,7 @@
 .GuestcontentMain {
-    height: 100vh;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto-fit;
 }
 .bg-logo-text {
     color: white;

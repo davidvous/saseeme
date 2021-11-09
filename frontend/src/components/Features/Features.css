@@ -2,19 +2,21 @@
     background: white;
     color: black;
     padding: 1vw 10vw 0vw 10vw;
-    overflow: scroll;
+    height: auto;
 }
 
 .FeaturesContent {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2.5%;
+    height: auto;
 }
 
 .feature1Container, .feature2Container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     text-align: center;
+    height: auto;
 }
 
 .feature1Container > img, .feature2Container > img{
