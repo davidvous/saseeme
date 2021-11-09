@@ -6,8 +6,7 @@
 }
 
 .loginButton {
-    color: red;
-    background-color: transparent;
+  background-color: transparent;
   border: 2px white solid;
   color: white;
   padding: 10px 15px;
@@ -22,4 +21,9 @@
 .loginButton:hover {
      background-color: white;
   color: black;
+}
+
+.LoginContainer {
+    height: 50vh;
+    background: white;
 }
