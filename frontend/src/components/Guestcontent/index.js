@@ -1,6 +1,7 @@
 import React from 'react';
 import './Guestcontent.css';
 import Searchbar from "../Searchbar"
+import Features from '../Features'
 
 function Guestcontent() {
 
@@ -31,7 +32,7 @@ function Guestcontent() {
                 </div>
                 <Searchbar />
             </div>
-            <div className="features" />
+            <Features />
         </div>
     );
 }

@@ -1,0 +1,31 @@
+.FooterContent {
+  background-color: #f4f4f4;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  padding: 1vh 15vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.links {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+align-content: start;
+}
+
+.info {
+    display:flex;
+    flex-direction:column;
+}
+
+.info > a {
+    text-align: center;
+    color:#Ea646a;
+}
+
+

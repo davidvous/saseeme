@@ -18,6 +18,9 @@ height: 3vh;
 .SearchQ:focus {
     outline: none;
 }
+.fa-utensils {
+    color: white;
+}
 
 .SubmitButton {
     border: none;
@@ -27,7 +30,6 @@ height: 3vh;
     cursor: pointer;
     transition: 0.3s;
 }
-
 
 .SubmitButton:hover, .SubmitButton:focus {
     background: #F1b5b9;
