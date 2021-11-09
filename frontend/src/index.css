@@ -3,6 +3,18 @@
     padding: 0;
 }
 
+.pageContainer {
+  position: relative;
+  min-height: 100vh;
+}
+
+.contentWrap {
+  padding-bottom: 2.5rem;
+}
+
+.footer {
+}
+
 .appContainer {
     background: url("https://cdn.discordapp.com/attachments/907133739128217621/907286629100695572/saseeme_bgfinal.png");
     background-position: 50%;
