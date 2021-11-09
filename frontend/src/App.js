@@ -7,6 +7,12 @@ import Navigation from "./components/Navigation";
 import Maincontent from "./components/Maincontent";
 import Footer from "./components/Footer"
 
+const links = {
+    email: "ledavidvu@gmail.com",
+    linkedin: "https://www.linkedin.com/in/david-vu-le/",
+    github: "https://github.com/davidvous"
+}
+
 function App() {
 
     const dispatch = useDispatch();
@@ -28,7 +34,7 @@ function App() {
                 )}
                 <Maincontent isLoaded={isLoaded} />
             </div>
-            <Footer />
+            <Footer links={links} />
         </>
     );
 }

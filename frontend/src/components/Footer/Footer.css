@@ -23,8 +23,9 @@ align-content: start;
     flex-direction:column;
 }
 
-.info > .name {
+.info > a {
     text-align: center;
+    color:#Ea646a;
 }
 
 
