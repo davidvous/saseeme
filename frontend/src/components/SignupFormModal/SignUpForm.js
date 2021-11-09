@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from "react-router-dom";
 import * as sessionActions from "../../store/session";
-import './SignupFormPage.css';
+import { Modal } from '../../context/Modal'
 
-function SignupFormPage() {
+function SignUpForm() {
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
     const [email, setEmail] = useState("");
@@ -12,8 +12,6 @@ function SignupFormPage() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errors, setErrors] = useState([]);
-
-    if (sessionUser) return <Redirect to="/" />;
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,6 +25,8 @@ function SignupFormPage() {
         }
         return setErrors(['Confirm Password field must be the same as the Password field']);
     };
+
+    // if (sessionUser) return <Redirect to="/" />;
 
     return (
         <form onSubmit={handleSubmit}>
@@ -71,7 +71,8 @@ function SignupFormPage() {
             </label>
             <button type="submit">Sign Up</button>
         </form>
-    );
+    )
 }
 
-export default SignupFormPage;
+export default SignUpForm;
+
