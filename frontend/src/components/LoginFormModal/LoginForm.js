@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import * as sessionActions from "../../store/session";
 import { useDispatch } from "react-redux";
 import './LoginFormPage.css';
+import imageLinks from "../../data/imageLinks";
 
 function LoginForm() {
     const dispatch = useDispatch();
@@ -21,35 +22,41 @@ function LoginForm() {
     };
 
     return (
-        <div className="LoginContainer">
+        <div className="modal_container">
             <form onSubmit={handleSubmit}>
-                <div className="logo">
-
+                <div className="modal_logo">
+                    <img src={`${imageLinks.invert_logo}`} />
                 </div>
                 <ul>
                     {errors.map((error, idx) => (
                         <li key={idx}>{error}</li>
                     ))}
                 </ul>
-                <label>
-                    Username or Email
-                    <input
-                        type="text"
-                        value={credential}
-                        onChange={(e) => setCredential(e.target.value)}
-                        required
-                    />
-                </label>
-                <label>
-                    Password
-                    <input
-                        type="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </label>
-                <button type="submit">Log In</button>
+                <div className="modal_username">
+                    <i className="fas fa-user">
+                        <input
+                            type="text"
+                            value={credential}
+                            placeholder="Username or E-mail"
+                            onChange={(e) => setCredential(e.target.value)}
+                            required
+                        />
+                    </i>
+                </div>
+                <div className="modal_password">
+                    <i className="fas fa-key">
+                        <input
+                            type="password"
+                            value={password}
+                            placeholder="Password"
+                            onChange={(e) => setPassword(e.target.value)}
+                            required
+                        />
+                    </i>
+                </div>
+                <div className="modal_submit">
+                    <button type="submit">Log In</button>
+                </div>
             </form>
         </div>
     );
