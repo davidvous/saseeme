@@ -3,18 +3,14 @@ import { useDispatch } from "react-redux";
 import { Route, Switch } from "react-router-dom";
 import SignupFormPage from "./components/SignupFormPage";
 import * as sessionActions from "./store/session";
+
+import aboutme from "./data/aboutme"
 import Navigation from "./components/Navigation";
 import Maincontent from "./components/Maincontent";
 import Footer from "./components/Footer"
 
-const links = {
-    email: "ledavidvu@gmail.com",
-    linkedin: "https://www.linkedin.com/in/david-vu-le/",
-    github: "https://github.com/davidvous"
-}
 
 function App() {
-
     const dispatch = useDispatch();
     const [isLoaded, setIsLoaded] = useState(false);
     useEffect(() => {
@@ -34,7 +30,7 @@ function App() {
                 )}
                 <Maincontent isLoaded={isLoaded} />
             </div>
-            <Footer links={links} />
+            <Footer links={aboutme} />
         </>
     );
 }
