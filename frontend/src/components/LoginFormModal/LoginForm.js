@@ -26,12 +26,15 @@ function LoginForm() {
             <form onSubmit={handleSubmit}>
                 <div className="modal_logo">
                     <img src={`${imageLinks.invert_logo}`} />
+                    yum.
                 </div>
-                <ul>
-                    {errors.map((error, idx) => (
-                        <li key={idx}>{error}</li>
-                    ))}
-                </ul>
+                <div className="modal_errors">
+                    <ul>
+                        {errors.map((error, idx) => (
+                            <li key={idx}>{error}</li>
+                        ))}
+                    </ul>
+                </div>
                 <div className="modal_username">
                     <i className="fas fa-user">
                         <input
