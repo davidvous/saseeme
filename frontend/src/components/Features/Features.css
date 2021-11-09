@@ -1,8 +1,8 @@
 .FeaturesContainer {
     background: white;
     color: black;
-    padding: 1vw 10vw 0vw 10vw;
-    height: auto;
+    padding: 1vw 3vw 0vw 3vw;
+    height: 100%;
 }
 
 .FeaturesContent {
@@ -10,6 +10,10 @@
     grid-template-columns: 1fr 1fr;
     gap: 2.5%;
     height: auto;
+}
+
+.FeaturesLeft, .FeaturesRight {
+    height: 100%;
 }
 
 .feature1Container, .feature2Container {

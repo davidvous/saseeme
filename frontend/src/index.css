@@ -6,20 +6,19 @@
 
 html, body {
     height: 100vh;
+    width: 100%;
 }
 
-.pageContainer {
-  position: relative;
-  height: 100%;
+#root {
+    height: 100vh;
+    width: 100vw;
 }
 
-.contentWrapper{
-  padding-bottom: 2.5rem;    /* Footer height */
-}
 .appContainer {
     background: url("https://cdn.discordapp.com/attachments/907133739128217621/907286629100695572/saseeme_bgfinal.png");
     background-position: 50%;
     height: 100%;
+    width: 100%;
 }
 
 
