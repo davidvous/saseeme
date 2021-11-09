@@ -3,5 +3,28 @@
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 2.5rem;            /* Footer height */
+  height: 5rem;
+  padding: 1vh 15vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
+
+.links {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+align-content: start;
+}
+
+.info {
+    display:flex;
+    flex-direction:column;
+}
+
+.info > .name {
+    text-align: center;
+}
+
+
