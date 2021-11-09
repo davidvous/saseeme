@@ -24,7 +24,15 @@
 }
 
 .modal_container {
-    height: 30vh;
+    height: 35vh;
+    background: white;
+    border-radius: 10px;
+    padding: 1vh 2vw;
+    margin: 0 auto;
+}
+
+.signup_container {
+    height: 38vh;
     background: white;
     border-radius: 10px;
     padding: 1vh 2vw;
@@ -33,11 +41,18 @@
 
 .modal_logo {
     width: 100%;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1vh;
 }
 
 .modal_logo > img {
     width: 25vh;
+}
+
+.modal_errors {
+    padding: 1vh 0vw 1vh 3vw;
 }
 
 .modal_username, .modal_password {
@@ -52,10 +67,31 @@
     padding-right: 2px;
 }
 
-.fa-user > input, .fa-key > input {
+.fa-user > input, .fa-key > input{
     border: none;
     width: 300px;
     padding-left: 5px;
+}
+
+.modal_username > label > input {
+    border: none;
+    width: 400px;
+    padding-left: 10px;
+}
+
+.modal_password > label > input {
+    border: none;
+    width: 200px;
+    padding-left: 15px;
+}
+
+.modal_username > label > input:focus {
+    outline:none;
+}
+
+
+.modal_password > label > input:focus {
+    outline:none;
 }
 
 
@@ -68,7 +104,7 @@
 }
 
 .modal_submit > button {
-  background-color: #Ea646a;
+  background-color: #706867;
   border: none;
   color: white;
   padding: 15px 32px;
