@@ -48,7 +48,7 @@ module.exports = (sequelize, DataTypes) => {
         lng: DataTypes.DECIMAL
     }, {});
     Restaurants.associate = function(models) {
-        // associations can be defined here
+        Restaurants.belongsTo(models.User, { foreignKey: 'user_id' });
     };
     return Restaurants;
 };
