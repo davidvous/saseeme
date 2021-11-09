@@ -18,6 +18,9 @@ height: 3vh;
 .SearchQ:focus {
     outline: none;
 }
+.fa-utensils {
+    color: white;
+}
 
 .SubmitButton {
     border: none;
