@@ -12,15 +12,15 @@ module.exports = {
                 allowNull: false,
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'Users',
-                }
+                    model: "Users",
+                },
             },
             restaurant_id: {
                 allowNull: false,
                 type: Sequelize.INTEGER,
                 references: {
-                    model: 'Restaurants',
-                }
+                    model: "Restaurants",
+                },
             },
             name: {
                 allowNull: false,
