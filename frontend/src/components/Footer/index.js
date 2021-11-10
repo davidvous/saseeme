@@ -11,10 +11,10 @@ function Footer({ links }) {
                     <p className="{basic.name}">{basic.name}</p></a>
             </div>
             <a href={`${github.link}`}>
-                <img height={`${github.height}`} width={`${github.width}`} src={`${github.imageUrl}`} />
+                <img alt="" height={`${github.height}`} width={`${github.width}`} src={`${github.imageUrl}`} />
             </a>
             <a href={`${linkedin.link}`}>
-                <img height={`${linkedin.height}`} width={`${linkedin.width}`} src={`${linkedin.imageUrl}`} /></a>
+                <img alt="" height={`${linkedin.height}`} width={`${linkedin.width}`} src={`${linkedin.imageUrl}`} /></a>
         </div >
     );
 }

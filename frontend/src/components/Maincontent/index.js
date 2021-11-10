@@ -1,8 +1,8 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import './Maincontent.css';
-import Guestcontent from '../Guestcontent'
+import Guestcontent from '../Guestcontent';
+import Foods from '../Foods';
 
 function Maincontent({ isLoaded }) {
 
@@ -10,7 +10,7 @@ function Maincontent({ isLoaded }) {
     let content;
     if (sessionUser) {
         content = (
-            <p>User is currently logged in!</p>
+            <Foods />
         );
     } else {
         content = (
