@@ -16,8 +16,6 @@ module.exports = {
                 name: "Spicy Beef Noodles",
                 imageUrl: "https://s3-media0.fl.yelpcdn.com/bphoto/E-893SSaOvqs-MVMOzC45Q/o.jpg",
                 description: "Hand pulled noodles in rich beef broth.",
-                createdAt: Date.now(),
-                updatedAt: Date.now(),
             }
         ], {});
     },

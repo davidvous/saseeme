@@ -14,8 +14,6 @@ module.exports = {
                 user_id: 1,
                 food_id: 1,
                 comment: "This was my first time trying this specific dish and it was amazing!",
-                createdAt: Date.now(),
-                updatedAt: Date.now(),
             }
         ], {});
     },
