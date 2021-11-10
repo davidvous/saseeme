@@ -25,7 +25,7 @@ function LoginForm() {
         <div className="modal_container">
             <form onSubmit={handleSubmit}>
                 <div className="modal_logo">
-                    <img src={`${imageLinks.invert_logo}`} />
+                    <img alt="" src={`${imageLinks.invert_logo}`} />
                     yum.
                 </div>
                 <div className="modal_errors">

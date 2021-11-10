@@ -8,7 +8,7 @@ function Features() {
             <div className="FeaturesContent">
                 <div className="FeaturesLeft">
                     <div className="feature1Container">
-                        <img src="https://cdn.discordapp.com/attachments/907133739128217621/907405696465772564/feature1.jpg" />
+                        <img alt="" src="https://cdn.discordapp.com/attachments/907133739128217621/907405696465772564/feature1.jpg" />
                         <div className="feature1Body">
                             <div className="feature1Heading">
                                 <p>CHECK IN & RATE</p>
@@ -21,7 +21,7 @@ function Features() {
                 </div>
                 <div className="FeaturesRight">
                     <div className="feature2Container">
-                        <img src="https://cdn.discordapp.com/attachments/907133739128217621/907406692466163722/feature2.jpg" />
+                        <img alt="" src="https://cdn.discordapp.com/attachments/907133739128217621/907406692466163722/feature2.jpg" />
                         <div className="feature2Body">
                             <div className="feature2Heading">
                                 <p>GO ON A SEE-FOOD DIET</p>

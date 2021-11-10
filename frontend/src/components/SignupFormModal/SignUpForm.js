@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import * as sessionActions from "../../store/session";
-import { Modal } from '../../context/Modal'
 import "../LoginFormModal/LoginFormPage.css";
 import imageLinks from "../../data/imageLinks";
 
 function SignUpForm() {
     const dispatch = useDispatch();
-    const sessionUser = useSelector((state) => state.session.user);
+    // const sessionUser = useSelector((state) => state.session.user);
     const [email, setEmail] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -34,7 +32,7 @@ function SignUpForm() {
         <div className="signup_container">
             <form onSubmit={handleSubmit}>
                 <div className="modal_logo">
-                    <img src={`${imageLinks.invert_logo}`} />
+                    <img alt="" src={`${imageLinks.invert_logo}`} />
                     Start your next food adventure today.
                 </div>
                 <div className="modal_errors">
