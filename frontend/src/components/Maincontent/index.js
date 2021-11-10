@@ -2,7 +2,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import './Maincontent.css';
 import Guestcontent from '../Guestcontent';
-import Foods from '../Foods';
+import ProfilePage from '../ProfilePage';
 
 function Maincontent({ isLoaded }) {
 
@@ -10,7 +10,7 @@ function Maincontent({ isLoaded }) {
     let content;
     if (sessionUser) {
         content = (
-            <Foods />
+            <ProfilePage />
         );
     } else {
         content = (

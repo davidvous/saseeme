@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getFoods } from "../../store/foods";
+import Profilepage from "../Profilepage";
+import Singlefood from '../Singlefood'
 
 const Foods = () => {
     const dispatch = useDispatch();
@@ -14,6 +16,8 @@ const Foods = () => {
     // Object.values = array of objects
     return (
         <div>
+            <Profilepage />
+            <Singlefood />
             <div>
                 <h1>Foods</h1>
                 {foods.map(dish => {
