@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
     }, {});
     Checkins.associate = function(models) {
         Checkins.belongsTo(models.User, { foreignKey: 'user_id' });
-        Checkins.belongsTo(models.Food, { foreignKey: 'food_id' });
+        Checkins.belongsTo(models.Foods, { foreignKey: 'food_id' });
     };
     return Checkins;
 };
