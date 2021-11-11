@@ -38,7 +38,7 @@ const Singlefood = ({
           <button
             onClick={() => handleDelete(`${food_id}`)}
             className="delete-button"
-          >
+            >
             Delete
           </button>
           <button>Update</button>
