@@ -8,10 +8,7 @@ const Singlefood = ({
     name,
     description,
     image,
-    user_id,
     restaurant_id,
-    createdAt,
-    updatedAt,
     userCheckins,
     userRestaurants,
 }) => {

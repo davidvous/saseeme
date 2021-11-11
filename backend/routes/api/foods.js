@@ -40,18 +40,16 @@ router.post(
 router.put(
     '/:id(\\d+)',
     asyncHandler(async (req, res, next) => {
-        const food = await Product.findByPk(req.params.id);
+        const food = await Foods.findByPk(req.params.id);
 
-        if (product) {
-            product.image = req.body.image || product.image;
-            product.name = req.body.name || product.name;
-            product.price = req.body.price || product.price;
+        if (food) {
+            food.name = req.body.name || food.name;
+            food.imageUrl = req.body.imageUrl || food.imageUrl;
+            food.description = req.body.description || food.description;
 
-            await product.save();
-            res.json({ product });
-        } else {
-            next(productNotFoundError(req.params.id));
-        }
+            await food.save();
+            res.json({ food });
+        } 
     })
 );
 

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
+import { Switch, Route } from "react-router-dom";
 import * as sessionActions from "./store/session";
 
 import aboutme from "./data/aboutme"
@@ -16,13 +17,21 @@ function App() {
     }, [dispatch]);
 
     return (
-        <>
-            <div className="appContainer">
-                <Navigation isLoaded={isLoaded} />
-                <Maincontent isLoaded={isLoaded} />
-            </div>
-            <Footer links={aboutme} />
-        </>
+      <>
+        <div className="appContainer">
+          <Switch>
+            <Route exact path="/">
+              <Navigation isLoaded={isLoaded} />
+              <Maincontent isLoaded={isLoaded} />
+            </Route>
+            <Route>
+              <Navigation isLoaded={isLoaded} />
+              <h2>Page Not Found</h2>
+            </Route>
+          </Switch>
+          <Footer links={aboutme} />
+        </div>
+      </>
     );
 }
 
