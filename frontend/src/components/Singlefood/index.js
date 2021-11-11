@@ -1,13 +1,21 @@
 import React from "react";
 
-const Singlefood = ({ userFoods }) => {
-    const oneFood = Object.values(userFoods).find(food => food.id == 2);
-    const { imageUrl, name, description } = oneFood;
+const Singlefood = ({
+    key,
+    id,
+    name,
+    description,
+    image,
+    user_id,
+    restaurant_id,
+    createdAt,
+    updatedAt,
+}) => {
 
     return (
         <div className="SinglefoodContainer">
             <div>
-                <img src={imageUrl} />
+                <img src={image} />
             </div>
             <div>
                 <span>{name}</span>

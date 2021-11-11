@@ -4,14 +4,18 @@ import './Maincontent.css';
 import Guestcontent from '../Guestcontent';
 import ProfilePage from '../ProfilePage';
 import { getFoods } from "../../store/foods";
+import { getCheckins } from "../../store/checkins";
+import { getRestaurants } from "../../store/restaurants";
 
 function Maincontent({ isLoaded }) {
 
     const dispatch = useDispatch();
-    const [Foodloaded, setFoodloaded] = useState(false);
+    const [AllLoaded, setAllLoaded] = useState(false);
 
     useEffect(() => {
-        dispatch(getFoods()).then(() => setFoodloaded(true));
+        dispatch(getFoods());
+        dispatch(getCheckins());
+        dispatch(getRestaurants()).then(() => setAllLoaded(true));
     }, [dispatch]);
 
     const sessionUser = useSelector(state => state.session.user);
@@ -19,8 +23,8 @@ function Maincontent({ isLoaded }) {
 
     if (sessionUser) {
         content = (
-            <ProfilePage Foodloaded={Foodloaded} />
-        );
+            <ProfilePage AllLoaded={AllLoaded} />
+        )
     } else {
         content = (
             <Guestcontent />
