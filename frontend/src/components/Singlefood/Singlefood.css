@@ -1,0 +1,9 @@
+.SinglefoodContainer > img {
+    display: block;
+    max-width: 15vw;
+    max-height: 100%;
+}
+
+.SinglefoodContainer > span {
+    color: white;
+}
