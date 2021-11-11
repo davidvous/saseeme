@@ -20,6 +20,8 @@ const ProfilePage = () => {
         dispatch(getRestaurants());
     }, [dispatch]);
 
+    if (!userFoods || !userCheckins || !userRestaurants ) return null;
+
     let content;
     let userFoodArray = [];
     userFoods.forEach(({ id, user_id, restaurant_id, name, imageUrl, description, createdAt, updatedAt }) => (

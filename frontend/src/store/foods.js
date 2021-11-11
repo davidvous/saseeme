@@ -21,16 +21,22 @@ export const getFoods = () => async (dispatch) => {
         dispatch(load(foods));
         return foods;
     }
-}
+};
 
-// export const deleteFood = (id) = async (dispatch) => {
+// export const removeFood = (id) = async (dispatch) => {
 //     const response = await csrfFetch(`/api/foods/${id}`, {
 //         method: "DELETE",
 //     })
 
 //     if (response.ok) {
-//         dispatch(removeFood(id));
+//         dispatch(deleteFood(id));
 //     }
+// }
+
+export const anything = whatever = async dispatch => {
+
+};
+
 
 const foodsReducer = (state = {}, action) => {
     let newState = {};
