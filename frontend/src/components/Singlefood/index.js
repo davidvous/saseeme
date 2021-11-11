@@ -2,12 +2,13 @@ import React from "react";
 import './Singlefood.css';
 import { useDispatch } from 'react-redux';
 import { removeFood } from '../../store/foods'
+import EditFoodModal from '../EditFood'
 
 const Singlefood = ({
     id: food_id,
     name,
     description,
-    image,
+    image: imageUrl,
     restaurant_id,
     userCheckins,
     userRestaurants,
@@ -32,7 +33,7 @@ const Singlefood = ({
         </span>
         <br />
         <span>{location ? `At: ${location.title}` : null}</span>
-        <img alt={description} src={image} />
+        <img alt={description} src={imageUrl} />
         <span>{foodComment ? foodComment.comment : null}</span>
         <div className="button-row">
           <button
@@ -41,7 +42,14 @@ const Singlefood = ({
           >
             Delete
           </button>
-          <button>Update</button>
+          <EditFoodModal
+                key={food_id}
+                food_id={food_id}
+                name={name}
+                description={description}
+                image={imageUrl}
+                restaurant_id={restaurant_id}
+            />
         </div>
       </div>
     );

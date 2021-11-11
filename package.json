@@ -1,0 +1,26 @@
+{
+  "name": "saseeme",
+  "version": "1.0.0",
+  "description": "Sometimes there's just a few things that you like at a restaurant. And all of the times, those few things are seafood. Saseeme is an Untappd clone that allows users to check-in to their favorite restaurant, show their favorite seafood dish, and comment on it!",
+  "main": "index.js",
+  "scripts": {
+    "heroku-postbuild": "npm run build --prefix frontend",
+    "install": "npm --prefix backend install backend && npm --prefix frontend install frontend",
+    "dev:backend": "npm install --prefix backend start",
+    "dev:frontend": "npm install --prefix frontend start",
+    "sequelize": "npm run --prefix backend sequelize",
+    "sequelize-cli": "npm run --prefix backend sequelize-cli",
+    "start": "npm start --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidvous/saseeme.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidvous/saseeme/issues"
+  },
+  "homepage": "https://github.com/davidvous/saseeme#readme"
+}

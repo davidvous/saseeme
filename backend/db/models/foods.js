@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
     Foods.associate = function(models) {
         Foods.belongsTo(models.User, { foreignKey: 'user_id' });
         Foods.belongsTo(models.Restaurants, { foreignKey: 'restaurant_id' });
-        Foods.hasMany(models.Checkins, { foreignKey: 'food_id' });
+        Foods.hasMany(models.Checkins, { foreignKey: 'food_id', onDelete: 'cascade', hooks: true });
     };
     return Foods;
 };

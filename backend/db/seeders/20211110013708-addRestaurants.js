@@ -10,7 +10,6 @@ module.exports = {
         */
         return queryInterface.bulkInsert('Restaurants', [
             {
-                id: 1,
                 user_id: 1,
                 title: "Shang Artisan Noodle",
                 address: "4983 W Flamingo Rd Ste B",
@@ -22,7 +21,6 @@ module.exports = {
                 lng: -115.209980,
             },
             {
-                id: 2,
                 user_id: 1,
                 title: "Izakaya Go",
                 address: "3775 Spring Mountain Rd Ste 301",
@@ -34,7 +32,6 @@ module.exports = {
                 lng: -115.189730,
             },
             {
-                id: 3,
                 user_id: 1,
                 title: "La Neta Cocina y Lounge",
                 address: "1770 Festival Plaza Dr Ste 200",
@@ -46,7 +43,6 @@ module.exports = {
                 lng: -115.332280,
             },
             {
-                id: 4,
                 user_id: 2,
                 title: "Oc and Lau 2",
                 address: "9892 Westminster Blvd Unit R",
@@ -58,7 +54,6 @@ module.exports = {
                 lng: -117.956590,
             },
             {
-                id: 5,
                 user_id: 2,
                 title: "Soowon Galbi KBBQ",
                 address: "856 S Vermont Ave Ste C",
@@ -70,7 +65,6 @@ module.exports = {
                 lng: -118.291320,
             },
             {
-                id: 6,
                 user_id: 2,
                 title: "Rockin' Cajun Seafood and Grill",
                 address: "940 E Dominguez St Ste C",
@@ -82,7 +76,6 @@ module.exports = {
                 lng: -118.261893,
             },
             {
-                id: 7,
                 user_id: 3,
                 title: "Bun Bo Hue An Nam",
                 address: "740 Story Rd Ste 3",
@@ -94,7 +87,6 @@ module.exports = {
                 lng: -121.858158,
             },
             {
-                id: 8,
                 user_id: 3,
                 title: "Com Tam Dat Thanh",
                 address: "1055 Tully Rd Ste A",
@@ -106,7 +98,6 @@ module.exports = {
                 lng: -121.838006,
             },
             {
-                id: 9,
                 user_id: 4,
                 title: "LP Steamers",
                 address: "1100 E Fort Avenue",
@@ -118,7 +109,6 @@ module.exports = {
                 lng: -76.598613,
             },
             {
-                id: 10,
                 user_id: 4,
                 title: "Charming Elephant",
                 address: "2324 Boston St Ste B",
