@@ -10,7 +10,6 @@ module.exports = {
         */
         return queryInterface.bulkInsert('Foods', [
             {
-                id: 1,
                 user_id: 1,
                 restaurant_id: 1,
                 name: "Spicy Beef Noodles",
@@ -18,7 +17,6 @@ module.exports = {
                 description: "Hand pulled noodles in rich beef broth.",
             },
             {
-                id: 2,
                 user_id: 1,
                 restaurant_id: 2,
                 name: "Uni Pasta",
@@ -26,7 +24,6 @@ module.exports = {
                 description: "Scrumptious uni pasta made with brown rice.",
             },
             {
-                id: 3,
                 user_id: 1,
                 restaurant_id: 3,
                 name: "Churrasco",
@@ -34,7 +31,6 @@ module.exports = {
                 description: "Cooked Chimichurri Marinated Skirt Steak with roasted potato and chorizo.",
             },
             {
-                id: 4,
                 user_id: 2,
                 restaurant_id: 4,
                 name: "Razor Clams",
@@ -42,7 +38,6 @@ module.exports = {
                 description: "Grilled razor clams, basted in garlic, oil, and ginger sauce.",
             },
             {
-                id: 5,
                 user_id: 2,
                 restaurant_id: 5,
                 name: "Marinated Short Rib",
@@ -50,7 +45,6 @@ module.exports = {
                 description: "Also known as Kalbi. Typically grilled with other assortments of meat.",
             },
             {
-                id: 6,
                 user_id: 2,
                 restaurant_id: 6,
                 name: "Seafood Boil",
@@ -58,7 +52,6 @@ module.exports = {
                 description: "Medley of seafood items including shrimp, clams, crab legs, and shellfish.",
             },
             {
-                id: 7,
                 user_id: 3,
                 restaurant_id: 7,
                 name: "Spicy Beef Noodle Soup",
@@ -66,7 +59,6 @@ module.exports = {
                 description: "Spicy beef broth seasoned with chili oil and served with thick rice noodles.",
             },
             {
-                id: 8,
                 user_id: 3,
                 restaurant_id: 8,
                 name: "Broken Rice",
@@ -74,7 +66,6 @@ module.exports = {
                 description: "Traditional Vietnamese Broken Rice served with shredded pork, pork chop, egg, and vegetables.",
             },
             {
-                id: 9,
                 user_id: 4,
                 restaurant_id: 9,
                 name: "Steamed Crabs",
@@ -82,7 +73,6 @@ module.exports = {
                 description: "Chesapeake Bay Blue Crabs steamed and served with Old Bay Seasoning.",
             },
             {
-                id: 10,
                 user_id: 4,
                 restaurant_id: 10,
                 name: "Papaya Salad",
