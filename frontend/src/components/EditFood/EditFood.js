@@ -104,7 +104,7 @@ function EditFood({ food_id,
           placeholder="Food Description"
         />
         <button className="submit-button" type="submit">
-          Add Food
+          Edit Food
         </button>
       </form>
     </div>
