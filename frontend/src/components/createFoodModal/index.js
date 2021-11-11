@@ -3,10 +3,6 @@ import { Modal } from "../../context/Modal";
 import CreateFood from "./createFood";
 import "./createFoodModal.css";
 
-export const closeModal = () => {
-    return CreateFoodModal("close");
-}
-
 function CreateFoodModal() {
   const [showModal, setShowModal] = useState(false);
 

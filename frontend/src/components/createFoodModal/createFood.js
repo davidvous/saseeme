@@ -3,9 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useHistory} from "react-router-dom";
 import { addFood } from "../../store/foods";
 import "../LoginFormModal/LoginFormPage.css";
-import CreateFoodModal from "./index";
 
-function CreateFood( {open}) {
+function CreateFood() {
 
     const history = useHistory();
     const dispatch = useDispatch();
@@ -42,8 +41,7 @@ function CreateFood( {open}) {
             imageUrl,
             description,
         };
-
-        console.log(open);
+        
         dispatch(addFood(payload));
     };
 

@@ -42,6 +42,7 @@ router.put(
         const food = await Foods.findByPk(req.params.id);
 
         if (food) {
+            food.restaurant_id = req.body.restaurant_id || food.restaurant_id;
             food.name = req.body.name || food.name;
             food.imageUrl = req.body.imageUrl || food.imageUrl;
             food.description = req.body.description || food.description;

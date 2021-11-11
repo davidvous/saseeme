@@ -2,12 +2,13 @@ import React from "react";
 import './Singlefood.css';
 import { useDispatch } from 'react-redux';
 import { removeFood } from '../../store/foods'
+import EditFoodModal from '../EditFood'
 
 const Singlefood = ({
     id: food_id,
     name,
     description,
-    image,
+    image: imageUrl,
     restaurant_id,
     userCheckins,
     userRestaurants,
@@ -24,26 +25,33 @@ const Singlefood = ({
     const location = Object.values(userRestaurants).find(target => target.id === restaurant_id);
 
     return (
-        <div className="SinglefoodContainer">
-            <span>{name}</span>
-            <br />
-            <span>
-                {foodComment ? `Original Post: ${foodComment.createdAt}` : null}
-            </span>
-            <br />
-            <span>{location ? `At: ${location.title}` : null}</span>
-            <img alt={description} src={image} />
-            <span>{foodComment ? foodComment.comment : null}</span>
-            <div className="button-row">
-                <button
-                    onClick={() => handleDelete(`${food_id}`)}
-                    className="delete-button"
-                >
-                    Delete
-                </button>
-                <button>Update</button>
-            </div>
+      <div className="SinglefoodContainer">
+        <span>{name}</span>
+        <br />
+        <span>
+          {foodComment ? `Original Post: ${foodComment.createdAt}` : null}
+        </span>
+        <br />
+        <span>{location ? `At: ${location.title}` : null}</span>
+        <img alt={description} src={imageUrl} />
+        <span>{foodComment ? foodComment.comment : null}</span>
+        <div className="button-row">
+          <button
+            onClick={() => handleDelete(`${food_id}`)}
+            className="delete-button"
+          >
+            Delete
+          </button>
+          <EditFoodModal
+                key={food_id}
+                food_id={food_id}
+                name={name}
+                description={description}
+                image={imageUrl}
+                restaurant_id={restaurant_id}
+            />
         </div>
+      </div>
     );
 };
 
