@@ -1,4 +1,5 @@
 import { csrfFetch } from './csrf';
+import closeModal from '../components/createFoodModal/index';
 
 const LOAD = "foods/load";
 const DELETE_FOOD = "foods/deleteFood";
@@ -46,9 +47,12 @@ export const addFood = (dish) => async (dispatch) => {
     body: JSON.stringify(dish),
   });
 
+  console.log(response, "<----RESPONSE")
+
   if (response.ok) {
     const data = await response.json();
     dispatch(newFood(data));
+    dispatch(getFoods());
     return data;
   }
 };

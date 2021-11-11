@@ -5,6 +5,7 @@ import Singlefood from '../Singlefood'
 import { getFoods } from "../../store/foods";
 import { getCheckins } from "../../store/checkins";
 import { getRestaurants } from "../../store/restaurants";
+import CreateFoodModal from '../../components/createFoodModal';
 
 
 const ProfilePage = () => {
@@ -20,7 +21,7 @@ const ProfilePage = () => {
         dispatch(getRestaurants());
     }, [dispatch]);
 
-    if (!userFoods || !userCheckins || !userRestaurants ) return null;
+    if (!userFoods || !userCheckins || !userRestaurants) return null;
 
     let content;
     let userFoodArray = [];
@@ -42,8 +43,11 @@ const ProfilePage = () => {
 
     if (userFoodArray.length > 0) {
         content = (
-            userFoodArray.map(item => item)
-        )
+          <>
+            <CreateFoodModal />
+            {userFoodArray.map((item) => item)}
+          </>
+        );
     } else {
         content = (
             <h1>Submit your first dish!</h1>)

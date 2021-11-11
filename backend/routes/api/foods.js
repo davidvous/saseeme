@@ -30,7 +30,6 @@ router.delete('/:id(\\d+)', async (req, res) => {
 router.post(
     '/',
     asyncHandler(async (req, res) => {
-        console.log(req);
         const { user_id, restaurant_id, name, imageUrl, description } = req.body;
         const food = await Foods.create({ user_id, restaurant_id, name, imageUrl, description });
         return res.json({ food });
@@ -39,7 +38,7 @@ router.post(
 
 router.put(
     '/:id(\\d+)',
-    asyncHandler(async (req, res, next) => {
+    asyncHandler(async (req, res) => {
         const food = await Foods.findByPk(req.params.id);
 
         if (food) {
