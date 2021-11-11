@@ -20,7 +20,6 @@ const ProfilePage = () => {
         dispatch(getRestaurants());
     }, [dispatch]);
 
-    console.log(sessionUser.id, sessionUser.username)
     let content;
     let userFoodArray = [];
     userFoods.forEach(({ id, user_id, restaurant_id, name, imageUrl, description, createdAt, updatedAt }) => (
@@ -35,6 +34,8 @@ const ProfilePage = () => {
                 restaurant_id={restaurant_id}
                 createdAt={createdAt}
                 updatedAt={updatedAt}
+                userCheckins={userCheckins}
+                userRestaurants={userRestaurants}
             />) : null));
 
     if (userFoodArray.length > 0) {
