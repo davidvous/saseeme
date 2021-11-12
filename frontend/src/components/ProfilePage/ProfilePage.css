@@ -5,3 +5,9 @@
  h1 {
      color: white;
  }
+
+ .foodSelector {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     margin-left: 3vw;
+ }

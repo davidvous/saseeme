@@ -8,7 +8,7 @@ function EditFood({ food_id,
     food_name,
     food_description,
     image,
-    food_restaurant_id, }) {
+    food_restaurant_id, setShowModal }) {
     const history = useHistory();
     const dispatch = useDispatch();
     const sessionUser = useSelector((state) => state.session.user);
@@ -57,56 +57,71 @@ function EditFood({ food_id,
         dispatch(changeFood(payload));
 
         history.push("/");
+        setShowModal(false);
     };
 
     return (
-        <div className="modal_container">
-            {validationErrors.length > 0 && (
-                <div>
-                    The following errors were found:
-                    <ul>
-                        {validationErrors.map((error) => (
-                            <li key={error}>{error}</li>
-                        ))}
-                    </ul>
-                </div>
-            )}
-            <form onSubmit={handleSubmit}>
-                <label for="restaurants">Choose a restaurant:</label>
-                <select
-                    name="restaurants"
-                    id="restaurants"
-                    onChange={(e) => setRestaurant_id(Number(e.target.value))}
-                >
-                    {userRestaurants.map((each, idx) => (
-                        <option key={each.id} value={each.id}>
-                            {each.title}
-                        </option>
-                    ))}
-                </select>
-                <input
-                    onChange={(e) => setName(e.target.value)}
-                    value={name}
-                    type="text"
-                    placeholder="Food Dish Name"
-                />
-                <input
-                    onChange={(e) => setImageUrl(e.target.value)}
-                    value={imageUrl}
-                    type="text"
-                    placeholder="URL of Food Dish"
-                />
-                <input
-                    onChange={(e) => setDescription(e.target.value)}
-                    value={description}
-                    type="text"
-                    placeholder="Food Description"
-                />
-                <button className="submit-button" type="submit">
-                    Edit Food
-                </button>
-            </form>
-        </div>
+      <div className="modal_container">
+        <h2>Edit <span>{food_name}</span></h2>
+        {validationErrors.length > 0 && (
+          <div>
+            The following errors were found:
+            <ul>
+              {validationErrors.map((error) => (
+                <li key={error}>{error}</li>
+              ))}
+            </ul>
+          </div>
+        )}
+        <form onSubmit={handleSubmit}>
+          <label for="restaurants">Choose a restaurant:</label>
+          <div className="modal_username">
+            <select
+              name="restaurants"
+              id="restaurants"
+              onChange={(e) => setRestaurant_id(Number(e.target.value))}
+            >
+              {userRestaurants.map((each, idx) => (
+                <option key={each.id} value={each.id}>
+                  {each.title}
+                </option>
+              ))}
+            </select>
+          </div>
+          <label for="restaurants">Edit Food Dish Name:</label>
+          <div className="modal_username">
+            <input
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+              type="text"
+              placeholder="Food Dish Name"
+            />
+          </div>
+          <label for="restaurants">Enter URL of Food:</label>
+          <div className="modal_username">
+            <input
+              onChange={(e) => setImageUrl(e.target.value)}
+              value={imageUrl}
+              type="text"
+              placeholder="URL of Food Dish"
+            />
+          </div>
+          <label for="restaurants">Enter description of Food Dish:</label>
+          <div className="modal_username">
+            <input
+              onChange={(e) => setDescription(e.target.value)}
+              value={description}
+              type="text"
+              placeholder="Food Description"
+            />
+          </div>
+          <div className="modal_submit">
+            <button className="loginButton" type="submit">
+              Edit Food
+            </button>
+          </div>
+        </form>
+      </div>
     );
 }
 

@@ -45,7 +45,9 @@ const ProfilePage = () => {
         content = (
           <>
             <CreateFoodModal />
+            <div className="foodSelector">
             {userFoodArray.map((item) => item)}
+            </div>
           </>
         );
     } else {

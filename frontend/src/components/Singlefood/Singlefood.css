@@ -1,4 +1,20 @@
-.SinglefoodContainer > img {
+.SinglefoodContainer {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.SingleFoodImage, .SingleFoodImage > span {
+    padding: 1vh 0 1vh 0;
+    display: flex;
+  justify-content: center;
+}
+
+.SingleFoodImage + span {
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.SingleFoodImage > img {
     display: block;
     max-width: 15vw;
     max-height: 100%;

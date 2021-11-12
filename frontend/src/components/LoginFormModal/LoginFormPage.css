@@ -5,6 +5,22 @@
     text-align: center;
 }
 
+.profile_container {
+    position: absolute;
+    margin-top: 5vh;
+    background: white;
+    border: solid white 1px;
+    border-radius: 2px;
+    text-align:right; 
+    font-size: medium;
+}
+
+.profile-dropdown > li {
+    list-style-type: none;
+    padding: 1px;
+    line-height: normal;
+}
+
 .loginButton {
   background-color: transparent;
   border: 2px white solid;
@@ -22,6 +38,25 @@
      background-color: white;
   color: black;
 }
+
+.logoutButton {
+  background-color: transparent;
+  border: none;
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+  min-width: 100%;
+}
+
+.logoutButton:hover {
+     background-color: black;
+  color: white;
+}
+
 
 .modal_container {
     height: 35vh;
@@ -115,3 +150,30 @@
   cursor: pointer;
 }
 
+.buttonRow {
+    margin-top: 1vh;
+    display: flex;
+  justify-content: center;
+}
+
+.postNewButton {
+    color: #Ea646a;
+}
+
+.postNewButton {
+    color: white;
+    background-color: #ba474d;
+}
+
+.loginButton:hover {
+     background-color: white;
+     color: black;
+}
+
+h2 > span {
+    color: #Ea646a;
+}
+
+h2 {
+    padding-bottom: 2vh;
+}

@@ -1,8 +1,9 @@
 import React from "react";
 import './Singlefood.css';
 import { useDispatch } from 'react-redux';
-import { removeFood } from '../../store/foods'
-import EditFoodModal from '../EditFood'
+import { removeFood } from '../../store/foods';
+import EditFoodModal from '../EditFood';
+import "../LoginFormModal/LoginFormPage.css";
 
 const Singlefood = ({
     id: food_id,
@@ -33,23 +34,25 @@ const Singlefood = ({
         </span>
         <br />
         <span>{location ? `At: ${location.title}` : null}</span>
+        <div className="SingleFoodImage">
         <img alt={description} src={imageUrl} />
+        </div>
         <span>{foodComment ? foodComment.comment : null}</span>
-        <div className="button-row">
-          <button
-            onClick={() => handleDelete(`${food_id}`)}
-            className="delete-button"
-          >
-            Delete
-          </button>
-          <EditFoodModal
+        <div className="buttonRow">
+                <button
+                onClick={() => handleDelete(`${food_id}`)}
+                className="loginButton"
+                >
+                DELETE
+                </button>
+                <EditFoodModal
                 key={food_id}
                 food_id={food_id}
                 name={name}
                 description={description}
                 image={imageUrl}
                 restaurant_id={restaurant_id}
-            />
+                />
         </div>
       </div>
     );
