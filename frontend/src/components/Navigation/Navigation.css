@@ -9,9 +9,14 @@
     padding-right: 10px;
 }
 
+.demoButtonContainer {
+    padding-top: 10px;
+    text-align: center;
+}
+
 .SignUpLinkContainer {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 10px;
     text-align: left;
 }
@@ -37,4 +42,22 @@
 .SignUpLink:hover, .HomeLink:hover{
     background-color: white;
     color: black;
+}
+
+.DemoLink {
+    background: #Ea646a;
+    color: white;
+    text-decoration: none;
+    border: 2px white solid;
+    padding: 10px 15px;
+    text-align: center;
+    Text-decoration: none;
+    display: inline-block;
+    Font-size: 14px;
+    Transition: 0.3s;
+    Cursor: pointer;
+}
+
+.DemoLink:hover{
+    background-color: #F1b5b9;
 }

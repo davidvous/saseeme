@@ -1,13 +1,15 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { NavLink, Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import ProfileButton from './ProfileButton';
 import LoginFormModal from '../LoginFormModal';
 import SignupFormModal from '../SignupFormModal';
+import * as sessionActions from "../../store/session";
 import './Navigation.css';
 
 function Navigation({ isLoaded }) {
     const sessionUser = useSelector(state => state.session.user);
+    const dispatch = useDispatch();
 
     let sessionLinks;
     if (sessionUser) {
@@ -16,12 +18,20 @@ function Navigation({ isLoaded }) {
         );
     } else {
         sessionLinks = (
-            <div className="SignUpLinkContainer">
-                <LoginFormModal />
-                <div className="SignUpLinkLink">
-                    <SignupFormModal />
-                </div>
+          <div className="SignUpLinkContainer">
+            <LoginFormModal />
+            <div className="demoButtonContainer">
+            <Link to="/" 
+            className="DemoLink"
+            onClick={() => dispatch(sessionActions.login({
+                credential: "gmaildemo",
+                password: "password"
+            }))}>DEMO</Link>
             </div>
+            <div className="SignUpLinkLink">
+              <SignupFormModal />
+            </div>
+          </div>
         );
     }
 
