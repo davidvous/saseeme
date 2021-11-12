@@ -1,9 +1,7 @@
 import { csrfFetch } from './csrf';
 
 const LOAD_RES = "restaurants/load";
-const DELETE_RES = "restaurants/deleteRes";
 const ADD_RES = "/restaurants/addRes";
-const EDIT_RES = "/restaurants/editRes";
 
 const load = (list) => ({
     type: LOAD_RES,
@@ -35,15 +33,18 @@ export const addRes = (resta) => async (dispatch) => {
   if (response.ok) {
     const data = await response.json();
     dispatch(newRes(data));
-    // dispatch(getRestaurants());
+    dispatch(getRestaurants());
     return data;
   }
 };
 
 
 
+
+
 const restaurantsReducer = (state = {}, action) => {
     let newState = {};
+    console.log("inside the reducer")
     switch (action.type) {
       case LOAD_RES:
         action.list.forEach(

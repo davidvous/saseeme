@@ -1,21 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useHistory } from "react-router-dom";
 import { addFood } from "../../store/foods";
 import "../LoginFormModal/LoginFormPage.css";
+import { getFoods } from "../../store/foods";
+import { getCheckins } from "../../store/checkins";
+import { getRestaurants } from "../../store/restaurants";
 
 import CreateFood from './createFood'
 import CreateFoodRes from "./createFoodRes";
 import CreateFoodLoc from "./createFoodLoc";
 
 function CreateForm({ setShowModal }) {
-  const history = useHistory();
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
-  const userRestaurants = useSelector((state) =>
-    Object.values(state.restaurants)
-  );
   const [page, setPage] = useState(0);
+
+
+    useEffect(() => {
+      dispatch(getFoods());
+      dispatch(getCheckins());
+      dispatch(getRestaurants());
+    }, [dispatch]);
 
 
   const FormTitles = [
@@ -28,7 +34,9 @@ function CreateForm({ setShowModal }) {
     if (page === 0) {
       return <CreateFood setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage}/>
     } else if (page === 1) {
-      return <CreateFoodRes userId={sessionUser.id} setPage={setPage} />;
+      return (
+        <CreateFoodRes setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage} />
+      );
     } else {
       return <CreateFoodLoc />;
     }

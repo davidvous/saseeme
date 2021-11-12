@@ -60,7 +60,7 @@ function CreateFood({setShowModal, userId, setPage}) {
           </div>
         )}
         <form>
-          <label for="restaurants">Choose a restaurant:</label>
+          <label htmlFor="restaurants">Choose a restaurant:</label>
           <div className="modal_username">
             <select
               name="restaurants"
@@ -83,7 +83,7 @@ function CreateFood({setShowModal, userId, setPage}) {
               Don't see the restaurant? Add it!
             </button>
           </div>
-          <label for="restaurants">Food Dish Name:</label>
+          <label htmlFor="restaurants">Food Dish Name:</label>
           <div className="modal_username">
             <input
               onChange={(e) => setName(e.target.value)}
@@ -92,7 +92,7 @@ function CreateFood({setShowModal, userId, setPage}) {
               placeholder="Food Dish Name"
             />
           </div>
-          <label for="restaurants">Enter URL of Food:</label>
+          <label htmlFor="restaurants">Enter URL of Food:</label>
           <div className="modal_username">
             <input
               onChange={(e) => setImageUrl(e.target.value)}
@@ -101,7 +101,7 @@ function CreateFood({setShowModal, userId, setPage}) {
               placeholder="URL of Food Dish"
             />
           </div>
-          <label for="restaurants">Enter description of Food Dish:</label>
+          <label htmlFor="restaurants">Enter description of Food Dish:</label>
           <div className="modal_username">
             <input
               onChange={(e) => setDescription(e.target.value)}
