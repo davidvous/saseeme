@@ -25,7 +25,7 @@ function EditFoodModal({ food_id,
             food_description={description}
             image={imageUrl}
             food_restaurant_id={restaurant_id}
-            open={setShowModal}
+            setShowModal={setShowModal}
           />
         </Modal>
       )}

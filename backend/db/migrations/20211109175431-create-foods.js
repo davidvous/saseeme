@@ -27,7 +27,7 @@ module.exports = {
                 type: Sequelize.STRING(50)
             },
             imageUrl: {
-                type: Sequelize.STRING(75)
+                type: Sequelize.STRING(250)
             },
             description: {
                 allowNull: false,
