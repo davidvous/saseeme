@@ -13,26 +13,29 @@ const validateCheckin = [
     handleValidationErrors
 ];
 
-//get all checkins
 router.get("/", asyncHandler(async (req, res) => {
     const allRestaurants = await Restaurants.findAll();
     return res.json(allRestaurants);
 }))
 
-//get individual checkin
-router.get("/:id(\\d+)", asyncHandler(async (req, res) => {
-    const checkin = await Checkins.findByPk(req.params.id);
-    return res.json(checkin);
-}))
-
-//create checkin
-router.post("/", validateCheckin, asyncHandler(async (req, res) => {
-    const { destructureREQBODY } = req.body;
-
-    const checkin = await Checkins.create({ destructureREQBODY });
-
-    return res.json(checkin);
-}))
+router.post(
+    '/',
+    asyncHandler(async (req, res) => {
+        const { user_id, title, address, city, state, zipCode, country, lat, lng } = req.body;
+        const newRes = await Restaurants.create({
+          user_id,
+          title,
+          address,
+          city,
+          state,
+          zipCode,
+          country,
+          lat,
+          lng,
+        });
+        return res.json({ newRes });
+    })
+);
 
 // update checkin
 // router.put("/id(\\d+)", asyncHandler(async (req, res, next) => {

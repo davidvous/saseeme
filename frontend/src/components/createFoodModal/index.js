@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
-import CreateFood from "./createFood";
+import CreateForm from "./createForm";
 import "./createFoodModal.css";
 
 function CreateFoodModal() {
@@ -13,7 +13,7 @@ function CreateFoodModal() {
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <CreateFood setShowModal={setShowModal} />
+          <CreateForm setShowModal={setShowModal} />
         </Modal>
       )}
     </div>
