@@ -52,7 +52,11 @@ const ProfilePage = () => {
         );
     } else {
         content = (
-            <h1>Submit your first dish!</h1>)
+            <>
+                <CreateFoodModal />
+                <h1>Submit your first dish!</h1>)
+            </>
+        )
     }
 
     return (

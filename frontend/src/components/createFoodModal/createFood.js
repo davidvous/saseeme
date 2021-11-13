@@ -4,11 +4,12 @@ import { useHistory} from "react-router-dom";
 import { addFood } from "../../store/foods";
 import "../LoginFormModal/LoginFormPage.css";
 
-function CreateFood({setShowModal}) {
+import CreateFoodRes from './createFoodRes'
+import CreateFoodLoc from "./createFoodLoc";
 
-    const history = useHistory();
+function CreateFood({setShowModal, userId, setPage}) {
+
     const dispatch = useDispatch();
-    const sessionUser = useSelector((state) => state.session.user);
     const userRestaurants = useSelector((state) => Object.values(state.restaurants));
 
     const [restaurant_id, setRestaurant_id] = useState(1);
@@ -35,7 +36,7 @@ function CreateFood({setShowModal}) {
         if (errors.length > 0) return setValidationErrors(errors);
 
         const payload = {
-            user_id: sessionUser.id,
+            user_id: userId,
             restaurant_id,
             name,
             imageUrl,
@@ -47,8 +48,7 @@ function CreateFood({setShowModal}) {
     };
 
     return (
-      <div className="modal_container">
-        <h2>Add a food dish</h2>
+      <>
         {validationErrors.length > 0 && (
           <div>
             The following errors were found:
@@ -59,8 +59,8 @@ function CreateFood({setShowModal}) {
             </ul>
           </div>
         )}
-        <form onSubmit={handleSubmit}>
-          <label for="restaurants">Choose a restaurant:</label>
+        <form>
+          <label htmlFor="restaurants">Choose a restaurant:</label>
           <div className="modal_username">
             <select
               name="restaurants"
@@ -73,8 +73,17 @@ function CreateFood({setShowModal}) {
                 </option>
               ))}
             </select>
+            <button
+              className="submit-button"
+              onClick={(e) => {
+                e.preventDefault();
+                setPage(1);
+              }}
+            >
+              Don't see the restaurant? Add it!
+            </button>
           </div>
-          <label for="restaurants">Food Dish Name:</label>
+          <label htmlFor="restaurants">Food Dish Name:</label>
           <div className="modal_username">
             <input
               onChange={(e) => setName(e.target.value)}
@@ -83,7 +92,7 @@ function CreateFood({setShowModal}) {
               placeholder="Food Dish Name"
             />
           </div>
-          <label for="restaurants">Enter URL of Food:</label>
+          <label htmlFor="restaurants">Enter URL of Food:</label>
           <div className="modal_username">
             <input
               onChange={(e) => setImageUrl(e.target.value)}
@@ -92,7 +101,7 @@ function CreateFood({setShowModal}) {
               placeholder="URL of Food Dish"
             />
           </div>
-          <label for="restaurants">Enter description of Food Dish:</label>
+          <label htmlFor="restaurants">Enter description of Food Dish:</label>
           <div className="modal_username">
             <input
               onChange={(e) => setDescription(e.target.value)}
@@ -102,12 +111,16 @@ function CreateFood({setShowModal}) {
             />
           </div>
           <div className="modal_submit">
-            <button className="submit-button" type="submit">
+            <button
+              className="submit-button"
+              type="submit"
+              onClick={handleSubmit}
+            >
               Add Food
             </button>
           </div>
         </form>
-      </div>
+      </>
     );
 }
 
