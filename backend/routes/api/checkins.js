@@ -25,27 +25,32 @@ router.get("/:id(\\d+)", asyncHandler(async (req, res) => {
     return res.json(checkin);
 }))
 
-//create checkin
-router.post("/", validateCheckin, asyncHandler(async (req, res) => {
-    const { destructureREQBODY } = req.body;
+router.post(
+  "/",
+  asyncHandler(async (req, res) => {
+    const { user_id, food_id, comment  } =
+      req.body;
+    const data = await Checkins.create({
+        user_id, food_id, comment
+    });
+    return res.json({ data });
+  })
+);
 
-    const checkin = await Checkins.create({ destructureREQBODY });
+router.put(
+  "/:id(\\d+)",
+  asyncHandler(async (req, res) => {
+    const checkin = await Checkins.findByPk(req.params.id);
 
-    return res.json(checkin);
-}))
+    if (checkin) {
+      checkin.user_id = req.body.user_id || checkin.user_id;
+      checkin.food_id = req.body.food_id || checkin.food_id;
+      checkin.comment = req.body.comment || checkin.comment;
 
-// update checkin
-// router.put("/id(\\d+)", asyncHandler(async (req, res, next) => {
-//     const checkin = await Checkins.findByPk(req.params.id);
-
-//     if (checkin) {
-
-
-//         await checkin.save();
-//         res.json(checkin);
-//     } else {
-//     }
-// }));
-
+      await checkin.save();
+      res.json({ checkin });
+    }
+  })
+);
 
 module.exports = router;

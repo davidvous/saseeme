@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useHistory } from "react-router-dom";
-import { addFood } from "../../store/foods";
 import "../LoginFormModal/LoginFormPage.css";
 import { getFoods } from "../../store/foods";
 import { getCheckins } from "../../store/checkins";
@@ -9,7 +7,7 @@ import { getRestaurants } from "../../store/restaurants";
 
 import CreateFood from './createFood'
 import CreateFoodRes from "./createFoodRes";
-import CreateFoodLoc from "./createFoodLoc";
+import CreateCheckin from "./createCheckin";
 
 function CreateForm({ setShowModal }) {
   const dispatch = useDispatch();
@@ -31,14 +29,14 @@ function CreateForm({ setShowModal }) {
   ];
 
   const PageDisplay = () => {
-    if (page === 0) {
+    if (page === 2) {
       return <CreateFood setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage}/>
     } else if (page === 1) {
       return (
         <CreateFoodRes setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage} />
       );
-    } else {
-      return <CreateFoodLoc />;
+    } else if (page === 0) {
+      return <CreateCheckin setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage} />;
     }
   };
   
