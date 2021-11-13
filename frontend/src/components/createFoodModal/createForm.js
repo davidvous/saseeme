@@ -12,7 +12,7 @@ import CreateCheckin from "./createCheckin";
 function CreateForm({ setShowModal }) {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
-  const [page, setPage] = useState(0);
+  const [page, setPage] = useState(2);
 
 
     useEffect(() => {
@@ -29,13 +29,13 @@ function CreateForm({ setShowModal }) {
   ];
 
   const PageDisplay = () => {
-    if (page === 2) {
+    if (page === 0) {
       return <CreateFood setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage}/>
     } else if (page === 1) {
       return (
         <CreateFoodRes setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage} />
       );
-    } else if (page === 0) {
+    } else if (page === 2) {
       return <CreateCheckin setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage} />;
     }
   };

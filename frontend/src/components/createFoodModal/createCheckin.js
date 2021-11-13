@@ -43,15 +43,15 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
   return (
     <>
       {validationErrors.length > 0 && (
-          <div>
-            The following errors were found:
-            <ul>
-              {validationErrors.map((error) => (
-                <li key={error}>{error}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <div>
+          The following errors were found:
+          <ul>
+            {validationErrors.map((error) => (
+              <li key={error}>{error}</li>
+            ))}
+          </ul>
+        </div>
+      )}
       <form>
         <label htmlFor="restaurants">Check in!</label>
         <div className="modal_username">
@@ -60,12 +60,23 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
             id="food"
             onChange={(e) => setfoodId(Number(e.target.value))}
           >
-            {allFoods.filter(each => (each.user_id == userId)).map(({id: food_id, name}) => (
-              <option key={food_id} value={food_id}>
-                {name}
-              </option>
-            ))}
+            {allFoods
+              .filter((each) => each.user_id == userId)
+              .map(({ id: food_id, name }) => (
+                <option key={food_id} value={food_id}>
+                  {name}
+                </option>
+              ))}
           </select>
+          <button
+            className="submit-button"
+            onClick={(e) => {
+              e.preventDefault();
+              setPage(0);
+            }}
+          >
+            I ate something different this time!
+          </button>
         </div>
         <label htmlFor="comment">How was it?</label>
         <div className="modal_username">
