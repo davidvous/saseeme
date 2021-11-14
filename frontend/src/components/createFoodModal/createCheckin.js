@@ -8,8 +8,9 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
   const dispatch = useDispatch();
 
   const allFoods = useSelector((state) => Object.values(state.foods));
+  let showFoods = allFoods.filter((each) => each.user_id == userId);
 
-  const [foodId, setfoodId] = useState(1);
+  const [foodId, setfoodId] = useState((showFoods[0] ? showFoods[0].id : 1));
   const [comment, setComment] = useState("");
   const [validationErrors, setValidationErrors] = useState([]);
 
@@ -21,11 +22,10 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
     return validateErrors;
   };
 
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    console.log(allFoods.map(item => item.food_id), ",----");
 
     const errors = validate();
     if (errors.length > 0) return setValidationErrors(errors);
@@ -37,7 +37,7 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
     };
     dispatch(addCheckin(payload));
     // setPage(0);
-    // setShowModal(false);
+    setShowModal(false);
   };
 
   return (
@@ -60,10 +60,9 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
             id="food"
             onChange={(e) => setfoodId(Number(e.target.value))}
           >
-            {allFoods
-              .filter((each) => each.user_id == userId)
-              .map(({ id: food_id, name }) => (
-                <option key={food_id} value={food_id}>
+            {showFoods
+              .map(({ id, name }) => (
+                <option key={id} value={id}>
                   {name}
                 </option>
               ))}
@@ -75,7 +74,7 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
               setPage(0);
             }}
           >
-            I ate something different this time!
+            Food I ate isn't listed!
           </button>
         </div>
         <label htmlFor="comment">How was it?</label>
