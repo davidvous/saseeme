@@ -43,7 +43,7 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
   return (
     <>
       {validationErrors.length > 0 && (
-        <div>
+        <div className="validationErrors">
           The following errors were found:
           <ul>
             {validationErrors.map((error) => (
@@ -53,8 +53,8 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
         </div>
       )}
       <form>
-        <label htmlFor="restaurants">Check in!</label>
-        <div className="modal_username">
+        <label htmlFor="restaurants">Which food?</label>
+        <div className="checkin_first">
           <select
             name="food"
             id="food"
@@ -74,16 +74,17 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
               setPage(0);
             }}
           >
-            Food I ate isn't listed!
+            Food I want isn't listed!
           </button>
         </div>
         <label htmlFor="comment">How was it?</label>
-        <div className="modal_username">
-          <input
+        <div className="checkin_first">
+          <textarea
             onChange={(e) => setComment(e.target.value)}
             value={comment}
             type="text"
             placeholder="Comment..."
+            height="300px"
           />
         </div>
         <div className="modal_submit">
@@ -92,7 +93,7 @@ function CreateCheckin({ setShowModal, userId, setPage }) {
             type="submit"
             onClick={handleSubmit}
           >
-            Add Food
+            Add Checkin!
           </button>
         </div>
       </form>

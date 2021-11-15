@@ -38,7 +38,9 @@ const Singlefood = ({
         <img alt={description} src={imageUrl} />
         </div>
         <span>{foodComment ? foodComment.comment : null}</span>
-        <div className="buttonRow">
+        <div className="buttonRowHeading">
+          <div className="checkinHeading">CHECKIN</div>
+          <div className="buttonRow">
                 <button
                 onClick={() => handleDelete(`${food_id}`)}
                 className="loginButton"
@@ -53,6 +55,7 @@ const Singlefood = ({
                 image={imageUrl}
                 restaurant_id={restaurant_id}
                 />
+                </div>
         </div>
       </div>
     );

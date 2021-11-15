@@ -54,7 +54,7 @@ function CreateFoodRes({ setShowModal, userId, setPage }) {
   return (
     <>
       {validationErrors.length > 0 && (
-        <div>
+        <div className="validationErrors">
           The following errors were found:
           <ul>
             {validationErrors.map((error) => (
@@ -88,8 +88,6 @@ function CreateFoodRes({ setShowModal, userId, setPage }) {
             type="text"
             placeholder="City..."
           />
-        </div>
-        <div className="modal_username">
           <input
             onChange={(e) => setState(e.target.value)}
             value={state}
@@ -104,8 +102,6 @@ function CreateFoodRes({ setShowModal, userId, setPage }) {
             type="text"
             placeholder="ZipCode..."
           />
-        </div>
-        <div className="modal_username">
           <input
             onChange={(e) => setCountry(e.target.value)}
             value={country}
@@ -120,8 +116,6 @@ function CreateFoodRes({ setShowModal, userId, setPage }) {
             type="number"
             placeholder="Latitude..."
           />
-        </div>
-        <div className="modal_username">
           <input
             onChange={(e) => setLng(e.target.value)}
             value={lng}

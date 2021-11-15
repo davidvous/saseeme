@@ -66,6 +66,33 @@
     margin: 0 auto;
 }
 
+/* food */
+.\30 {
+    height: 37rem;
+    background: white;
+    border-radius: 10px;
+    padding: 1vh 2vw;
+    margin: 0 auto;
+}
+
+/* checkin */
+.\32 {
+    height: 27rem;
+    background: white;
+    border-radius: 10px;
+    padding: 1vh 2vw;
+    margin: 0 auto;
+}
+
+/* restaurant */
+.\31 {
+    height: 33rem;
+    background: white;
+    border-radius: 10px;
+    padding: 1vh 2vw;
+    margin: 0 auto;
+}
+
 .signup_container {
     height: 38vh;
     background: white;
@@ -80,6 +107,12 @@
     flex-direction: column;
     align-items: center;
     padding-bottom: 1vh;
+}
+
+.validationErrors > ul {
+    color: red;
+    list-style: none;
+    margin-bottom: 1rem;
 }
 
 .modal_logo > img {
@@ -150,9 +183,25 @@
   cursor: pointer;
 }
 
-.buttonRow {
-    margin-top: 1vh;
+.buttonRowHeading {
+    margin-top: 1rem;
     display: flex;
+    gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkinHeading {
+    color: white;
+    border: 1px solid white;
+    line-height: 40px;
+    background: #FAD05F;
+    padding: 0.1rem;
+
+}
+.buttonRow {
+    display: flex;
+    gap: 1rem;
   justify-content: center;
 }
 
@@ -176,4 +225,31 @@ h2 > span {
 
 h2 {
     padding-bottom: 2vh;
+}
+
+.checkin_first {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.checkin_first > button {
+    padding: 0.5rem;
+}
+
+.checkin_first > textarea, .food_first > textarea {
+    width: 100%;
+    height: 8rem;
+    padding: 0.5rem;
+}
+
+.food_first {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.food_first > input {
+    width: 100%;
+    padding: 0.5rem;
 }
