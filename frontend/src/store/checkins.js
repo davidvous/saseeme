@@ -87,7 +87,6 @@ const checkinsReducer = (state = {}, action) => {
         return newState;
       case EDIT_CHECKIN:
         newState = { ...state };
-        console.log(newState, "I AM IN THE EDIT CHECKIN")
         newState[action.payload.id] = action.payload;
         return newState;
       case DELETE_CHECKIN:
