@@ -14,20 +14,34 @@ function CreateFood({setShowModal, userId, setPage}) {
     const [description, setDescription] = useState("");
     const [validationErrors, setValidationErrors] = useState([]);
 
+    function validURL(str) {
+      var pattern = new RegExp(
+        "^(https?:\\/\\/)?" + // protocol
+          "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
+          "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
+          "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
+          "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+          "(\\#[-a-z\\d_]*)?$",
+        "i"
+      ); // fragment locator
+      return !!pattern.test(str);
+    }
+
     const validate = () => {
         const validateErrors = [];
 
         if (!name) validateErrors.push("Please provide the food dish name.");
         if (!description)
             validateErrors.push("Please provide a brief description of the food dish.");
-        if (!imageUrl) validateErrors.push("please provide an URL to the image of the food dish.");
+        if (!imageUrl) validateErrors.push("Please provide an URL to the image of the food dish.");
+        if ((!validURL(imageUrl))) validateErrors.push("The image URL is not valid. Ex: http://....png")
 
         return validateErrors;
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
+        console.log(validURL('hello'));
         const errors = validate();
         if (errors.length > 0) return setValidationErrors(errors);
 
@@ -46,7 +60,7 @@ function CreateFood({setShowModal, userId, setPage}) {
     return (
       <>
         {validationErrors.length > 0 && (
-          <div>
+          <div className="validationErrors">
             The following errors were found:
             <ul>
               {validationErrors.map((error) => (
@@ -57,7 +71,7 @@ function CreateFood({setShowModal, userId, setPage}) {
         )}
         <form>
           <label htmlFor="restaurants">Choose a restaurant:</label>
-          <div className="modal_username">
+          <div className="food_first">
             <select
               name="restaurants"
               id="restaurants"
@@ -80,7 +94,7 @@ function CreateFood({setShowModal, userId, setPage}) {
             </button>
           </div>
           <label htmlFor="restaurants">Food Dish Name:</label>
-          <div className="modal_username">
+          <div className="food_first">
             <input
               onChange={(e) => setName(e.target.value)}
               value={name}
@@ -89,7 +103,7 @@ function CreateFood({setShowModal, userId, setPage}) {
             />
           </div>
           <label htmlFor="restaurants">Enter URL of Food:</label>
-          <div className="modal_username">
+          <div className="food_first">
             <input
               onChange={(e) => setImageUrl(e.target.value)}
               value={imageUrl}
@@ -98,8 +112,8 @@ function CreateFood({setShowModal, userId, setPage}) {
             />
           </div>
           <label htmlFor="restaurants">Enter description of Food Dish:</label>
-          <div className="modal_username">
-            <input
+          <div className="food_first">
+            <textarea
               onChange={(e) => setDescription(e.target.value)}
               value={description}
               type="text"

@@ -10,4 +10,5 @@
      display: grid;
      grid-template-columns: repeat(4, 1fr);
      margin-left: 3vw;
+     gap: 2rem;
  }

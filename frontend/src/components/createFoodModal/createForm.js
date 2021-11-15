@@ -42,7 +42,7 @@ function CreateForm({ setShowModal }) {
 
   return (
     
-    <div className="modal_container">
+    <div className={page}>
       <h2>{FormTitles[page]}</h2>
       {PageDisplay()}
     </div>
