@@ -26,7 +26,7 @@ function App() {
             </Route>
             <Route>
               <Navigation isLoaded={isLoaded} />
-              <h2>Page Not Found</h2>
+              <h2 className="notFound">Page Not Found!</h2>
             </Route>
           </Switch>
           <Footer links={aboutme} />
