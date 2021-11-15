@@ -9,7 +9,7 @@ function CreateFoodModal({bid}) {
 
   return (
     <div className="createFoodContainer">
-      <button className="loginButton postNewButton" onClick={() => setShowModal(true)}>
+      <button className="allPurpose" onClick={() => setShowModal(true)}>
         POST NEW CHECK-IN/FOOD/RESTAURANT
       </button>
       {showModal && (

@@ -27,7 +27,7 @@ function EditCheckin({ comment: checkinComment, checkinId, food_id, setShowModal
 
     const errors = validate();
     if (errors.length > 0) return setValidationErrors(errors);
-    console.log(updatedAt, (new Date(Date.now()).toISOString()), "<------");
+    
     const payload = {
       id: checkinId,
       user_id: sessionUser.id,

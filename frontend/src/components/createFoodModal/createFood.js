@@ -41,7 +41,7 @@ function CreateFood({setShowModal, userId, setPage}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(validURL('hello'));
+        
         const errors = validate();
         if (errors.length > 0) return setValidationErrors(errors);
 
