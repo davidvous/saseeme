@@ -183,22 +183,6 @@
   cursor: pointer;
 }
 
-.buttonRowHeading {
-    margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-  justify-content: center;
-  align-items: center;
-}
-
-.checkinHeading {
-    color: white;
-    border: 1px solid white;
-    line-height: 40px;
-    background: #FAD05F;
-    padding: 0.1rem;
-
-}
 .buttonRow {
     display: flex;
     gap: 1rem;
@@ -241,6 +225,10 @@ h2 {
     width: 100%;
     height: 8rem;
     padding: 0.5rem;
+}
+
+.checkinComment {
+    color: white;
 }
 
 .food_first {

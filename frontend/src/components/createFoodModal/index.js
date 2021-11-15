@@ -9,7 +9,7 @@ function CreateFoodModal() {
   return (
     <div className="createFoodContainer">
       <button className="loginButton postNewButton" onClick={() => setShowModal(true)}>
-        POST NEW CHECKIN/FOOD/RESTAURANT
+        POST NEW CHECK-IN/FOOD/RESTAURANT
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
