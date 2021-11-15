@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Modal } from "../../context/Modal";
 import EditFood from "./EditFood";
-import "./editFoodModal.css";
 
 
 function EditFoodModal({ food_id,

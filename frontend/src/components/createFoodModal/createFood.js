@@ -16,14 +16,14 @@ function CreateFood({setShowModal, userId, setPage}) {
 
     function validURL(str) {
       var pattern = new RegExp(
-        "^(https?:\\/\\/)?" + // protocol
-          "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name
-          "((\\d{1,3}\\.){3}\\d{1,3}))" + // OR ip (v4) address
-          "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // port and path
-          "(\\?[;&a-z\\d%_.~+=-]*)?" + // query string
+        "^(https?:\\/\\/)?" + // either http or https protcol
+          "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // the domain name
+          "((\\d{1,3}\\.){3}\\d{1,3}))" + // or ip v4 address
+          "(\\:\\d+)?(\\/[-a-z\\d%_.~+]*)*" + // the port & the path
+          "(\\?[;&a-z\\d%_.~+=-]*)?" + // the query
           "(\\#[-a-z\\d_]*)?$",
         "i"
-      ); // fragment locator
+      ); // fragment locator?
       return !!pattern.test(str);
     }
 
