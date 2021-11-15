@@ -25,7 +25,7 @@ const Singlefood = ({
     }
     else {
       singleCheckRender = null;
-      eachCheckinEntry = stateCheckins.filter(each => each.food_id == food_id).map(({comment}) => (<div className="checkinComment"><span>{comment}</span></div>)) 
+      eachCheckinEntry = stateCheckins.filter(each => each.food_id == food_id).slice(0).reverse().map(({comment, updatedAt}) => (<div className="checkinComment"><span>{`${comment} at ${updatedAt}`}</span></div>)) 
     }
     const dispatch = useDispatch();
 
