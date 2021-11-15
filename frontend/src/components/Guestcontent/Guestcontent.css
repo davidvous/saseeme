@@ -59,6 +59,11 @@ font-size: 2.5vw;
     grid-template-rows: repeat(2, fit-content(100%));
 }
 
+.imageCarousel > img {
+    border-radius: 3rem;
+}
+
+
 .SearchbarContainer {
     text-align: center;
     grid-area: c;

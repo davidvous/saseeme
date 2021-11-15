@@ -6,6 +6,7 @@ import { getFoods } from "../../store/foods";
 import { getCheckins, changeCheckin, removeCheckin } from "../../store/checkins";
 import { getRestaurants } from "../../store/restaurants";
 import CreateFoodModal from '../../components/createFoodModal';
+import Searchbar from "../Searchbar";
 
 
 
@@ -46,8 +47,8 @@ const ProfilePage = () => {
         content = (
           <>
             <div className="topProfileRow">
+            <Searchbar />
               <CreateFoodModal />
-
             </div>
             <div className="foodSelector">
               {userFoodArray.map((item) => item)}
@@ -56,7 +57,8 @@ const ProfilePage = () => {
         );
     } else {
         content = (
-            <>
+            <> 
+                <Searchbar/>
                 <CreateFoodModal />
                 <h1>Submit your first dish!</h1>)
             </>

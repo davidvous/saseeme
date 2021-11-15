@@ -317,3 +317,21 @@ h2 {
 .singleCheckinEdit:hover {
     background-color: #736d6d;
 }
+
+.allPurpose {
+    background-color: #3cd0b5;
+  border: 2px white solid;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.allPurpose:hover {
+     background-color: #4DEBCE;
+  color: white;
+}

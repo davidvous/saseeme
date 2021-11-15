@@ -44,7 +44,6 @@ export const addRes = (resta) => async (dispatch) => {
 
 const restaurantsReducer = (state = {}, action) => {
     let newState = {};
-    console.log("inside the reducer")
     switch (action.type) {
       case LOAD_RES:
         action.list.forEach(

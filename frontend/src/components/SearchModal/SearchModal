@@ -1,0 +1,16 @@
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import "../LoginFormModal/LoginFormPage.css";
+
+function SearchResults() {
+
+
+    return (
+        <div className="signup_container">
+            <span>Search Results below</span>
+        </div>
+    )
+}
+
+export default SearchResults;
+
