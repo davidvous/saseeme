@@ -3,8 +3,9 @@ import { Modal } from "../../context/Modal";
 import CreateForm from "./createForm";
 import "./createFoodModal.css";
 
-function CreateFoodModal() {
+function CreateFoodModal({bid}) {
   const [showModal, setShowModal] = useState(false);
+
 
   return (
     <div className="createFoodContainer">
@@ -13,7 +14,7 @@ function CreateFoodModal() {
       </button>
       {showModal && (
         <Modal onClose={() => setShowModal(false)}>
-          <CreateForm setShowModal={setShowModal} />
+          <CreateForm bid={bid} setShowModal={setShowModal} />
         </Modal>
       )}
     </div>

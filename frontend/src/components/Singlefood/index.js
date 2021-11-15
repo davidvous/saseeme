@@ -80,12 +80,14 @@ const Singlefood = ({
         {eachCheckinEntry}
         <div className="buttonRow">
           {singleCheckRender}
+          <div className="foodDeleteButton">
           <button
             onClick={() => handleDelete(`${food_id}`)}
             className="loginButton"
           >
             DELETE
           </button>
+          </div>
           <EditFoodModal
             key={food_id}
             food_id={food_id}
