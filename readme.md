@@ -15,6 +15,7 @@ Sometimes there's just a few things that you like at a restaurant. And all of th
 - React
 - Redux
 
+---
 ### Features
  User Authentication:
  - Log-in / Sign-Up / Demo User
@@ -35,4 +36,7 @@ Sometimes there's just a few things that you like at a restaurant. And all of th
  - View restaurants
  - Add new restaurants
  ---
- 
+ ### Wiki
+ Please feel visit the [wiki](https://github.com/davidvous/saseeme/wiki) for even more info!
+---
+### Challenges
