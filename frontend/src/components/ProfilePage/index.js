@@ -3,9 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import './ProfilePage.css'
 import Singlefood from '../Singlefood'
 import { getFoods } from "../../store/foods";
-import { getCheckins } from "../../store/checkins";
+import { getCheckins, changeCheckin, removeCheckin } from "../../store/checkins";
 import { getRestaurants } from "../../store/restaurants";
 import CreateFoodModal from '../../components/createFoodModal';
+
 
 
 const ProfilePage = () => {
@@ -15,7 +16,7 @@ const ProfilePage = () => {
     const userRestaurants = useSelector((state) => state.restaurants);
     const sessionUser = useSelector(state => state.session.user);
 
-    useEffect(() => {
+    useEffect((id) => {
         dispatch(getFoods());
         dispatch(getCheckins());
         dispatch(getRestaurants());

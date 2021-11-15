@@ -53,4 +53,12 @@ router.put(
   })
 );
 
+router.delete("/:id(\\d+)", async (req, res) => {
+  const checkin = await Checkins.findByPk(req.params.id);
+  if (checkin) {
+    await checkin.destroy();
+    res.status(204).end();
+  }
+});
+
 module.exports = router;

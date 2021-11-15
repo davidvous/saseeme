@@ -8,7 +8,7 @@ function CreateCheckinSingModal({food_id}) {
 
   return (
     <div className="editFormContainer">
-      <button className="loginButton" onClick={() => setShowModal(true)}>
+      <button className="singleCheckinButton" onClick={() => setShowModal(true)}>
         CHECKIN
       </button>
       {showModal && (

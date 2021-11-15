@@ -93,6 +93,14 @@
     margin: 0 auto;
 }
 
+.editCheckin_container {
+    height: 25rem;
+    background: white;
+    border-radius: 10px;
+    padding: 1vh 2vw;
+    margin: 0 auto;
+}
+
 .signup_container {
     height: 38vh;
     background: white;
@@ -183,6 +191,23 @@
   cursor: pointer;
 }
 
+.checkin_delete {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.checkin_delete  > button {
+  background-color: #Ea646a;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .buttonRow {
     display: flex;
     gap: 1rem;
@@ -229,6 +254,23 @@ h2 {
 
 .checkinComment {
     color: white;
+
+}
+
+.checkinCommentFirst {
+    color: #B4EB7C;
+}
+
+.editFormContainer {
+    margin: 1rem;
+}
+
+#foodName {
+    color: #EB9871;
+}
+
+#restaurantName {
+    font-weight:bolder
 }
 
 .food_first {
@@ -240,4 +282,37 @@ h2 {
 .food_first > input {
     width: 100%;
     padding: 0.5rem;
+}
+
+.singleCheckinButton {
+  background-color: #66C0CE;
+  border: 2px white solid;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.singleCheckinButton:hover {
+    background-color: white;
+    color: black;
+}
+
+.singleCheckinEdit {
+    border: 0.5px white solid;
+    background-color: #544948;
+  color: #FFFFFF;
+  border-radius: 2em;
+  padding:0.3em 1.2em;
+  margin:0 0.3em 0.3em 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.singleCheckinEdit:hover {
+    background-color: #736d6d;
 }
