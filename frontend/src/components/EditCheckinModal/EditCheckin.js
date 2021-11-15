@@ -10,6 +10,7 @@ function EditCheckin({ comment: checkinComment, checkinId, food_id, setShowModal
     const sessionUser = useSelector((state) => state.session.user);
     const checkinCreated = useSelector((state) => state.checkins[checkinId].createdAt);
 
+    const [updatedAt, setUpdatedAt] = useState(Date.now())
     const [comment, setComment] = useState(checkinComment);
     const [validationErrors, setValidationErrors] = useState([]);
 
@@ -26,14 +27,14 @@ function EditCheckin({ comment: checkinComment, checkinId, food_id, setShowModal
 
     const errors = validate();
     if (errors.length > 0) return setValidationErrors(errors);
-
+    console.log(updatedAt, (new Date(Date.now()).toISOString()), "<------");
     const payload = {
-        id: checkinId,
-        user_id: sessionUser.id,
-        food_id: food_id,
-        updatedAt: Date.now(),
-        createdAt: checkinCreated,
-        comment
+      id: checkinId,
+      user_id: sessionUser.id,
+      food_id: food_id,
+      updatedAt: updatedAt,
+      createdAt: checkinCreated,
+      comment,
     };
 
 
@@ -75,6 +76,13 @@ function EditCheckin({ comment: checkinComment, checkinId, food_id, setShowModal
             height="300px"
           />
         </div>
+        <div className="checkin_first">
+          <input
+          onChange={(e) => setUpdatedAt(e.target.value)} 
+          type="datetime-local"
+          value={updatedAt}
+          />
+        </div>
         <div className="modal_submit">
           <button
             className="submit-button"
@@ -85,9 +93,7 @@ function EditCheckin({ comment: checkinComment, checkinId, food_id, setShowModal
           </button>
         </div>
         <div className="checkin_delete">
-          <button onClick={handleSubmitDelete}>
-            DELETE
-          </button>
+          <button onClick={handleSubmitDelete}>DELETE</button>
         </div>
       </form>
     </div>

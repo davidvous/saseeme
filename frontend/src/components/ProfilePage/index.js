@@ -45,9 +45,12 @@ const ProfilePage = () => {
     if (userFoodArray.length > 0) {
         content = (
           <>
-            <CreateFoodModal />
+            <div className="topProfileRow">
+              <CreateFoodModal />
+
+            </div>
             <div className="foodSelector">
-            {userFoodArray.map((item) => item)}
+              {userFoodArray.map((item) => item)}
             </div>
           </>
         );

@@ -1,6 +1,4 @@
 .createFoodContainer {
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin-bottom: 1vh;
-    padding: 1vh 2vh 2vh 2vh;
+    margin-bottom: 1rem;
 }

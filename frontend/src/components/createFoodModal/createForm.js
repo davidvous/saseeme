@@ -9,7 +9,7 @@ import CreateFood from './createFood'
 import CreateFoodRes from "./createFoodRes";
 import CreateCheckin from "./createCheckin";
 
-function CreateForm({ setShowModal }) {
+function CreateForm({ setShowModal}) {
   const dispatch = useDispatch();
   const sessionUser = useSelector((state) => state.session.user);
   const userFoods = useSelector((state) => Object.values(state.foods).find(item => item.user_id == sessionUser.id));
@@ -27,11 +27,12 @@ function CreateForm({ setShowModal }) {
     "Choose which restaurant",
     "Checkin and leave a comment!",
   ];
-  
+
+
   const PageDisplay = () => {
     if (page === 0) {
       return <CreateFood setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage}/>
-    } else if (page === 1) {
+    } else if (page === 1 ) {
       return (
         <CreateFoodRes setShowModal={setShowModal} userId={sessionUser.id} setPage={setPage} />
         );
