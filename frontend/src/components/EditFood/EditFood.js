@@ -53,7 +53,6 @@ function EditFood({ food_id,
             description,
         };
 
-
         dispatch(changeFood(payload));
 
         history.push("/");
