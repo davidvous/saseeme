@@ -46,24 +46,24 @@ export const removeFood = (id) => async (dispatch) => {
 }
 
 export const addFood = (dish) => async (dispatch) => {
-  const response = await csrfFetch("/api/foods", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(dish),
-  });
+    const response = await csrfFetch("/api/foods", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dish),
+    });
 
-  if (response.ok) {
-    const data = await response.json();
-    dispatch(newFood(data));
-    dispatch(getFoods());
-    return data;
-  }
+    if (response.ok) {
+        const data = await response.json();
+        dispatch(newFood(data));
+        dispatch(getFoods());
+        return data;
+    }
 };
 
 export const changeFood = (data) => async dispatch => {
     const response = await csrfFetch(`/api/foods/${data.food_id}`, {
         method: "PUT",
-        headers: { "Content-Type": "application/json"},
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
     });
 

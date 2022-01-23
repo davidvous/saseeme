@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom";
 import { changeFood } from "../../store/foods";
 import "../LoginFormModal/LoginFormPage.css";
 
+
 function EditFood({ food_id,
     food_name,
     food_description,
